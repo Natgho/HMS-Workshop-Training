@@ -61,4 +61,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //agconnect dependency
     implementation 'com.huawei.agconnect:agconnect-core:1.4.1.300'
+    implementation 'com.huawei.hms:hwid:5.0.5.301'
 }
