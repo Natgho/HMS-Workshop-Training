@@ -1,0 +1,33 @@
+
+A
+java:S1172X"&Remove these unused method parameters.(Ó¾Ãïıÿÿÿÿ
+X
+java:S1126ş"AReplace this if-then-else statement by a single return statement.(¨şÅ€
+˜
+java:S1186î"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(çÅğÙ
+˜
+java:S1186é"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÀÄŞ’
+o
+java:S22937"YReplace the type specification in this constructor call with the diamond operator ("<>").(åıãŠ
+J
+java:S1172¬"3Remove this unused method parameter "mockLocation".(Êëò”
+H
+java:S1172§"1Remove this unused method parameter "isMockMode".(¢úë¸
+[
+java:S11245"EReorder the modifiers to comply with the Java Language Specification.(ôÇ‘
+t
+java:S2293="YReplace the type specification in this constructor call with the diamond operator ("<>").(Ğ¤Úœÿÿÿÿÿ
+˜
+java:S1186ó"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÁïÕÒ
+[
+java:S11248"EReorder the modifiers to comply with the Java Language Specification.(î·‹å
+o
+java:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(î·‹å
+`
+java:S11246"EReorder the modifiers to comply with the Java Language Specification.(¸ê†šşÿÿÿÿ
+t
+java:S2293d"YReplace the type specification in this constructor call with the diamond operator ("<>").(ì¥Åæüÿÿÿÿ
+[
+java:S11247"EReorder the modifiers to comply with the Java Language Specification.(åıãŠ
+F
+java:S4524L"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ

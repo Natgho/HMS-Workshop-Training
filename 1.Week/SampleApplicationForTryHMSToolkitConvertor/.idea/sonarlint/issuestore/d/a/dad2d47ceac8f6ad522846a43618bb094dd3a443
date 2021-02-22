@@ -1,0 +1,37 @@
+
+D
+java:S3740"/Provide the parametrized type for this generic.(—À¾:
+e
+java:S1192"ODefine a constant instead of duplicating this literal "Not Supported" 15 times.(“·ö–
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S112%"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S112V"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S112a"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+[	java:S112l"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+\	java:S112‘"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+\	java:S112˜"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+\	java:S112£"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+\	java:S112®"FDefine and throw a dedicated exception instead of using a generic one.(“·ö–
+H
+java:S11722"-Remove this unused method parameter "param0".(é¯Œ°øÿÿÿÿ
+A
+java:S1172G"&Remove these unused method parameters.(ƒôŒúÿÿÿÿ
+C
+java:S1172`"-Remove this unused method parameter "param0".(ğœÁ
+H
+java:S1172k"-Remove this unused method parameter "param0".(È©¨ƒûÿÿÿÿ
+I
+java:S1172‰"-Remove this unused method parameter "param0".(óÈ§¡şÿÿÿÿ
+9
+java:S2326"XR is not used in the method.(•ô†Àÿÿÿÿÿ
+d	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(•ô†Àÿÿÿÿÿ
+I
+java:S1172¢"-Remove this unused method parameter "param0".(¶¨µëùÿÿÿÿ
+I
+java:S1172­"-Remove this unused method parameter "param0".(È©¨ƒûÿÿÿÿ
