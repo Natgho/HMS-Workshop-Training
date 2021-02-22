@@ -1,20 +1,36 @@
 package com.hmsworkshop_week2_demo
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.huawei.hms.analytics.HiAnalytics
+import com.huawei.hms.analytics.HiAnalyticsInstance
+import com.huawei.hms.analytics.HiAnalyticsTools
+import com.huawei.hms.analytics.type.HAEventType
 import com.huawei.hms.support.account.AccountAuthManager
 import com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
 
 class LoginActivity  : AppCompatActivity() {
 
     private lateinit var  loginButton : HuaweiIdAuthButton
+    private lateinit var analyticsInstance: HiAnalyticsInstance
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         loginButton = findViewById(R.id.buttonLogin);
+
+        //Enabling Analytics
+        HiAnalyticsTools.enableLog();
+        // Generate the Analytics Instance
+        analyticsInstance = HiAnalytics.getInstance(this);
+        analyticsInstance.setAnalyticsEnabled(true)
+
+        //Fire a start tutorial event
+        createStartTutorialEvent()
+
 
         loginButton.setOnClickListener {
             //authorizationCodeSignIn()
@@ -68,7 +84,12 @@ class LoginActivity  : AppCompatActivity() {
     }
 
 
-
+    //Report a Predefined Event
+    private fun createStartTutorialEvent() {
+        val bundle = Bundle()
+        bundle.putString("TutorialName", "HMS_Workshop_Week2")
+        analyticsInstance.onEvent(HAEventType.STARTTUTORIAL, bundle)
+    }
 
 
     private fun redirectToMainActivity()
