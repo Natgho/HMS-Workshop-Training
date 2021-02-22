@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.huawei.hms.support.account.AccountAuthManager
-import com.huawei.hms.support.account.request.AccountAuthParams
-import com.huawei.hms.support.account.request.AccountAuthParamsHelper
 
 class LoginActivity  : AppCompatActivity() {
 
@@ -17,13 +15,19 @@ class LoginActivity  : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         loginButton = findViewById(R.id.buttonLogin);
 
-
         loginButton.setOnClickListener {
-
             //authorizationCodeSignIn()
-            idTokenSignIn()
-
+            AccountHelper.instance.idTokenSignIn(this)
         }
+
+        AccountHelper.instance.silentSignIn(activity = this,result =
+        { result-> Boolean
+
+            if(result)
+            {
+                redirectToMainActivity()
+            }
+        })
 
     }
 
@@ -63,21 +67,7 @@ class LoginActivity  : AppCompatActivity() {
     }
 
 
-    private fun authorizationCodeSignIn()
-    {
-        val authParams = AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM).setAuthorizationCode().createParams()
-        val service = AccountAuthManager.getService(this, authParams)
 
-        startActivityForResult(service.signInIntent, 8888)
-
-    }
-
-    private fun idTokenSignIn()
-    {
-        val authParams = AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM).setIdToken().createParams()
-        val service = AccountAuthManager.getService(this, authParams)
-        startActivityForResult(service.signInIntent, 9999)
-    }
 
 
     private fun redirectToMainActivity()
