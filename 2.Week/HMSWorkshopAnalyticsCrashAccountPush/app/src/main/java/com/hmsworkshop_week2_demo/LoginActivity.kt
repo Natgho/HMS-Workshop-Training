@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.huawei.hms.support.account.AccountAuthManager
+import com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
 
 class LoginActivity  : AppCompatActivity() {
 
-    private lateinit var  loginButton : com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
+    private lateinit var  loginButton : HuaweiIdAuthButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

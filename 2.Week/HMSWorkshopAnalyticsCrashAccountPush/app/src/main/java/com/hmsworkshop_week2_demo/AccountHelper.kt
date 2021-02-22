@@ -41,13 +41,13 @@ class AccountHelper private constructor(){
         val task = service.silentSignIn()
 
         task.addOnSuccessListener {
-            Log.i("Account Kit", "Silent Sign In Successful")
+            Log.i("AccountKit", "Silent Sign In Successful")
             result(true)
 
         }
 
         task.addOnFailureListener {
-            Log.i("Account Kit", "Silent Sign In Failed. Reason: "+ it.message)
+            Log.i("AccountKit", "Silent Sign In Failed. Reason: "+ it.message)
             result(false)
         }
     }
@@ -61,12 +61,12 @@ class AccountHelper private constructor(){
         val task = service.signOut()
 
         task.addOnCompleteListener {
-            Log.i("Account Kit", "Sign Out Successful")
+            Log.i("AccountKit", "Sign Out Successful")
             result(true)
         }
 
         task.addOnFailureListener {
-            Log.i("Account Kit", "Sign Out Failed. Reason: "+it.message)
+            Log.i("AccountKit", "Sign Out Failed. Reason: "+it.message)
             result(false)
         }
 
@@ -81,12 +81,12 @@ class AccountHelper private constructor(){
         val task = service.cancelAuthorization()
 
         task.addOnCompleteListener {
-            Log.i("Account Kit", "revokeAuthorization Successful")
+            Log.i("AccountKit", "revokeAuthorization Successful")
             result(true)
         }
 
         task.addOnFailureListener {
-            Log.i("Account Kit", "revokeAuthorization Failed. Reason: "+it.message)
+            Log.i("AccountKit", "revokeAuthorization Failed. Reason: "+it.message)
             result(false)
         }
 
