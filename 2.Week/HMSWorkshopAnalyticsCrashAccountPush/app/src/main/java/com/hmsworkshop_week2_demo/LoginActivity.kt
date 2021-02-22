@@ -47,7 +47,7 @@ class LoginActivity  : AppCompatActivity() {
             else
             {
                 // Sign in failed
-                Log.e("Account Kit","Sign in failed. Exception Message: "+authAccountTask.exception.message )
+                Log.e("AccountKit","Sign in failed. Exception Message: "+authAccountTask.exception.message )
             }
         }
         else if(requestCode == 9999)
@@ -62,7 +62,7 @@ class LoginActivity  : AppCompatActivity() {
             else
             {
                 // Sign in failed
-                Log.e("Account Kit","Sign in failed. Exception Message: "+authAccountTask.exception.message )
+                Log.e("AccountKit","Sign in failed. Exception Message: "+authAccountTask.exception.message )
             }
         }
     }
