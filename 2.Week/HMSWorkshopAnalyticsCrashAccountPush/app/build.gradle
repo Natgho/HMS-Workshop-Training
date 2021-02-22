@@ -64,4 +64,7 @@ dependencies {
     implementation 'com.huawei.hms:hwid:5.0.5.301'
     //Huawei Analytics
     implementation 'com.huawei.hms:hianalytics:5.1.0.300'
+
+    //Huawei Crash
+    implementation 'com.huawei.agconnect:agconnect-crash:1.2.1.300'
 }

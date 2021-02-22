@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.huawei.agconnect.crash.AGConnectCrash
 import com.huawei.hms.analytics.HiAnalytics
 import com.huawei.hms.analytics.HiAnalyticsInstance
 import com.huawei.hms.analytics.HiAnalyticsTools
@@ -27,6 +28,8 @@ class LoginActivity  : AppCompatActivity() {
         // Generate the Analytics Instance
         analyticsInstance = HiAnalytics.getInstance(this);
         analyticsInstance.setAnalyticsEnabled(true)
+        //Enable crash service
+        AGConnectCrash.getInstance().enableCrashCollection(true);
 
         //Fire a start tutorial event
         createStartTutorialEvent()
