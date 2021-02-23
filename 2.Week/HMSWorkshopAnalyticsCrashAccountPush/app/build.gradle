@@ -67,4 +67,7 @@ dependencies {
 
     //Huawei Crash
     implementation 'com.huawei.agconnect:agconnect-crash:1.2.1.300'
+
+    //Push Kit
+    implementation 'com.huawei.hms:push:5.0.4.302'
 }
