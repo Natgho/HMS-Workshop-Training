@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var  signOutButton : Button
     private lateinit var  revokeAuthButton : Button
+    private lateinit var  crashButton : Button
     private lateinit var  displayNameTextView: TextView
     private lateinit var analyticsInstance: HiAnalyticsInstance
     private lateinit var displayName: String
@@ -24,12 +25,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         signOutButton = findViewById(R.id.buttonSignOut);
         revokeAuthButton = findViewById(R.id.buttonRevokeAuth);
+        crashButton = findViewById(R.id.buttonCrash);
         displayNameTextView = findViewById(R.id.displayNameTV);
 
         //Enabling Analytics
         HiAnalyticsTools.enableLog();
         // Generate the Analytics Instance
         analyticsInstance = HiAnalytics.getInstance(this);
+
+
 
 
         displayName = AccountAuthManager.getAuthResult().displayName
@@ -48,7 +52,12 @@ class MainActivity : AppCompatActivity() {
             {
                 createCompleteTutorialEvent()
                 createRevokeAuthEvent()
+                setUserProfile()
             }
+        }
+
+        crashButton.setOnClickListener {
+            divideByZeroCrash()
         }
 
     }
@@ -61,6 +70,10 @@ class MainActivity : AppCompatActivity() {
         analyticsInstance.onEvent("revokeAuth", bundle)
     }
 
+    private fun setUserProfile()
+    {
+        analyticsInstance.setUserProfile("FavoriteCategory","Electronics");
+    }
 
 
     //Report a Predefined Event
@@ -70,6 +83,12 @@ class MainActivity : AppCompatActivity() {
         analyticsInstance.onEvent(HAEventType.COMPLETETUTORIAL, bundle)
     }
 
+    private fun divideByZeroCrash(): Int
+    {
+       var x : Int = 13/0
+
+        return x
+    }
 
     private fun redirectToLoginActivity()
     {
