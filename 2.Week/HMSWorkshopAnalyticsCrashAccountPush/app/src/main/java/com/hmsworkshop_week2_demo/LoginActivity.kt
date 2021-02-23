@@ -36,8 +36,8 @@ class LoginActivity  : AppCompatActivity() {
 
 
         loginButton.setOnClickListener {
-            //authorizationCodeSignIn()
-            AccountHelper.instance.idTokenSignIn(this)
+            AccountHelper.instance.authorizationCodeSignIn(this)
+            //AccountHelper.instance.idTokenSignIn(this)
         }
 
         AccountHelper.instance.silentSignIn(activity = this,result =

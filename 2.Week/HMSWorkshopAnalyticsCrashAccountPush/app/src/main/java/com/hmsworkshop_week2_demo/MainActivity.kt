@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.huawei.agconnect.crash.AGConnectCrash
 import com.huawei.hms.analytics.HiAnalytics
 import com.huawei.hms.analytics.HiAnalyticsInstance
 import com.huawei.hms.analytics.HiAnalyticsTools
@@ -57,7 +58,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         crashButton.setOnClickListener {
-            divideByZeroCrash()
+            //divideByZeroCrash()
+            crashServiceTestCrash()
         }
 
     }
@@ -88,6 +90,12 @@ class MainActivity : AppCompatActivity() {
        var x : Int = 13/0
 
         return x
+    }
+
+
+    private fun crashServiceTestCrash()
+    {
+        AGConnectCrash.getInstance().testIt();
     }
 
     private fun redirectToLoginActivity()
