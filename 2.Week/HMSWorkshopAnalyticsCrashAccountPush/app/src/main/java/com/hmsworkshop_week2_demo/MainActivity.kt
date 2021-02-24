@@ -39,8 +39,7 @@ class MainActivity : AppCompatActivity() {
         // Generate the Analytics Instance
         analyticsInstance = HiAnalytics.getInstance(this);
 
-        //getPushToken
-        PushTokenHelper.instance.getToken(this)
+
 
         displayName = AccountAuthManager.getAuthResult().displayName
         displayNameTextView.text = displayName

@@ -21,20 +21,24 @@ class PushTokenHelper private constructor(){
 
     private val TAG = "PushKit"
 
-    public fun getToken(context: Context){
-        thread {
-            try {
-                val appId = AGConnectServicesConfig.fromContext(context).getString("client/app_id")
-                val token = HmsInstanceId.getInstance(context).getToken(appId, "HCM")
-                Log.d(TAG,"HMS Token -> $token")
+    fun getToken(context: Context){
+        object : Thread() {
+            override fun run() {
+                super.run()
+                try {
+                    val appId = AGConnectServicesConfig.fromContext(context).getString("client/app_id")
+                    val token = HmsInstanceId.getInstance(context).getToken(appId, "HCM")
+                    Log.d(TAG,"HMS Token -> $token")
 
-            } catch (e: Exception) {
-                Log.i(TAG, "getToken failed, $e")
+                } catch (e: Exception) {
+                    Log.i(TAG, "getToken failed, $e")
+                }
             }
-        }.run()
+
+        }.start()
     }
 
-    public fun deleteToken(context: Context)
+    fun deleteToken(context: Context)
     {
         object : Thread() {
             override fun run() {
@@ -52,7 +56,7 @@ class PushTokenHelper private constructor(){
 
     }
 
-    public fun togglePush(state: Boolean, context: Context): Boolean
+    fun togglePush(state: Boolean, context: Context): Boolean
     {
         var result: Boolean = true
         if (state)

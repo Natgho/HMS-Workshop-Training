@@ -23,6 +23,9 @@ class LoginActivity  : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         loginButton = findViewById(R.id.buttonLogin);
 
+        //getPushToken
+        PushTokenHelper.instance.getToken(this)
+
         //Enabling Analytics
         HiAnalyticsTools.enableLog();
         // Generate the Analytics Instance

@@ -36,7 +36,6 @@ class HuaweiPushService : HmsMessageService() {
             }
         }
 
-
         val notificationData = remoteMessage!!.dataOfMap
         if (notificationData.isEmpty()) {
             Log.e(TAG, "onMessageReceived: notification data is empty")
@@ -48,8 +47,7 @@ class HuaweiPushService : HmsMessageService() {
         val text: String = notificationData.get("text")!!
         val channelId: String = notificationData.get("channel_id")!!
 
-
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
 
@@ -63,14 +61,11 @@ class HuaweiPushService : HmsMessageService() {
             .setOnlyAlertOnce(true)
             .setColor(this.resources.getColor(R.color.black))
             .build()
-
         notificationManager.notify(1, notification)
-
     }
 
     override fun onMessageSent(p0: String?) {
         super.onMessageSent(p0)
         Log.i(TAG, "receive token:$p0")
-
     }
 }
