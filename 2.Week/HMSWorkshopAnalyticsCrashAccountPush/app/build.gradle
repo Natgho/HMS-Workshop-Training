@@ -60,5 +60,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //agconnect dependency
-    implementation 'com.huawei.agconnect:agconnect-core:1.4.1.300'
+    implementation 'com.huawei.agconnect:agconnect-core:1.4.2.300'
+    implementation 'com.huawei.hms:hwid:5.0.5.301'
+    //Huawei Analytics
+    implementation 'com.huawei.hms:hianalytics:5.1.0.300'
+
+    //Huawei Crash
+    implementation 'com.huawei.agconnect:agconnect-crash:1.2.1.300'
+
+    //Push Kit
+    implementation 'com.huawei.hms:push:5.0.4.302'
 }
