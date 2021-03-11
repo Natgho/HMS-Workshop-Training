@@ -1,0 +1,37 @@
+{
+	"agcgw":{
+		"websocketbackurl":"connect-ws-dre.hispace.dbankcloud.cn",
+		"backurl":"connect-dre.dbankcloud.cn",
+		"websocketurl":"connect-ws-dre.hispace.dbankcloud.com",
+		"url":"connect-dre.hispace.hicloud.com"
+	},
+	"client":{
+		"appType":"1",
+		"cp_id":"5190090000024879230",
+		"product_id":"736430079244782905",
+		"client_id":"540464468723774080",
+		"client_secret":"82A714A6331F11AF5AD3CA5EDED4BAEE8C1B5738741D373066B0DA4DE551F93D",
+		"project_id":"736430079244782905",
+		"app_id":"103691009",
+		"api_key":"CgB6e3x9CHqu5EMNL3apkna/Ob7gS6dxMLT926TDV2MAB77MJso4Qfx6v0sN5VGG3Lt+CcA1Csf7sJFzWebo6TQ3",
+		"package_name":"com.enesinky.demo.audiotranscription"
+	},
+	"service":{
+		"analytics":{
+			"collector_url":"datacollector-dre.dt.hicloud.com,datacollector-dre.dt.dbankcloud.cn",
+			"resource_id":"p1",
+			"channel_id":""
+		},
+		"search":{
+			"url":"https://search-dre.cloud.huawei.com"
+		},
+		"cloudstorage":{
+			"storage_url":"https://ops-dre.agcstorage.link"
+		},
+		"ml":{
+			"mlservice_url":"ml-api-dre.ai.dbankcloud.com,ml-api-dre.ai.dbankcloud.cn"
+		}
+	},
+	"region":"DE",
+	"configuration_version":"1.0"
+}
