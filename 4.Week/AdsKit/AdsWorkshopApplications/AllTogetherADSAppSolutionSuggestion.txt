@@ -1,0 +1,5 @@
+https://developer.huawei.com/consumer/en/doc/development/HMSCore-Examples/sample-code-0000001050066947
+
+https://github.com/HMS-Core/hms-ads-demo-kotlin
+
+email: baris.can.kurtulmus@huawei.com
