@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ML Kit Demo</string>
+    <string name="audio_file_transcription">Audio File Transcription</string>
+    <string name="real_time_transcription">Real Time Transcription</string>
+    <string name="output">Console:</string>
+    <string name="choose_file">Choose File</string>
+    <string name="clear">Clear</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="translate_cloud">Translate (Cloud)</string>
+    <string name="translate_btn">Translate</string>
+    <string name="translation_result">Translation Result</string>
+    <string name="arrow"><![CDATA[—>]]></string>
+    <string name="input_text">Input Text</string>
+</resources>
